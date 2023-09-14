@@ -14,8 +14,9 @@ class Dense:
 	@classmethod
 	def xavier_init(cls, num_inputs: int, num_outputs: int):
 		sd = np.sqrt(2/(num_outputs + num_inputs))
-		self.weight = np.random.normal(loc=0, scale=sd, size=(num_inputs, num_outputs))
-		self.bias = np.zeros(num_outputs)
+		weight = np.random.normal(loc=0, scale=sd, size=(num_inputs, num_outputs))
+		bias = np.zeros(num_outputs)
+		return cls(weight, bias)
 
 	def forward(self, x: np.array):
 		"""
