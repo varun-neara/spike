@@ -1,0 +1,5 @@
+numpy
+attrs
+
+pytest
+pytest-cov
